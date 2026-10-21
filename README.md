@@ -1,6 +1,6 @@
 # Tutorial de Diffusers
 
-Instalação local do Hugging Face Diffusers usando `uv` e PyTorch com CUDA 13.2.
+Série de tutoriais de Hugging Face Diffusers, com scripts na pasta `scripts` e instalação local usando `uv` e PyTorch com CUDA 13.2.
 
 ## Pré-requisitos
 
@@ -46,13 +46,19 @@ python -c "import torch, diffusers, transformers, torchvision; print('PyTorch:',
 
 Confira se `CUDA do PyTorch` corresponde a `13.2` e se `GPU disponível` retorna `True` antes de executar o exemplo com CUDA.
 
-## 5. Executar o exemplo
+## 5. Acompanhar a série de tutoriais
+
+Os scripts da série ficam na pasta `scripts`, organizados por tutorial. Execute os comandos a partir da raiz do repositório, com o ambiente virtual ativado.
+
+### Quickstart — etapa 1
+
+O script `scripts/quickstart/tutorial_step_1.py` carrega o modelo `Tongyi-MAI/Z-Image` com `DiffusionPipeline` e gera uma imagem a partir de um prompt de texto, usando CUDA e 25 passos de inferência.
 
 ```powershell
-python pass1.py
+python scripts/quickstart/tutorial_step_1.py
 ```
 
-Na primeira execução, os arquivos do modelo são baixados. O exemplo salva a imagem gerada em `outputs/z_image/base_example_42.png`.
+Na primeira execução, os arquivos do modelo são baixados. A imagem gerada é salva em `outputs/z_image/result.png`. A pasta `outputs/` está no `.gitignore` para manter os resultados gerados fora do versionamento.
 
 ## Referências
 
