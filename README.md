@@ -38,6 +38,14 @@ uv pip install "diffusers[torch]" transformers torchvision --extra-index-url htt
 
 O extra `diffusers[torch]` inclui as dependências de integração com PyTorch. O `transformers` fornece os componentes de modelos de texto, e o `torchvision` oferece utilitários de visão computacional.
 
+### Suporte opcional à quantização
+
+Para acompanhar os tutoriais que utilizam quantização com `bitsandbytes`, instale também essa biblioteca com o ambiente virtual ativado:
+
+```powershell
+uv pip install bitsandbytes
+```
+
 ## 4. Verificar a instalação
 
 ```powershell
