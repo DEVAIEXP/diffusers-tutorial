@@ -11,7 +11,7 @@ quant_config = PipelineQuantizationConfig(
 )
 
 pipeline = DiffusionPipeline.from_pretrained(
-    "Tongyi-MAI/Z-Image", 
+    "Qwen/Qwen-Image-2.1", 
     dtype=torch.bfloat16, 
     device_map="cuda",
     quantization_config=quant_config,
@@ -25,7 +25,7 @@ generator = torch.Generator(device="cpu").manual_seed(42)
 pipeline.enable_model_cpu_offload() #<-- Model CPU offloading
 image = pipeline(prompt=prompt, num_inference_steps=25).images[0]
 
-output_dir = "./outputs/z_image"
+output_dir = "./outputs/qwen-image-2.1"
 
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)

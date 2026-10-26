@@ -46,6 +46,22 @@ Para acompanhar os tutoriais que utilizam quantização com `bitsandbytes`, inst
 uv pip install bitsandbytes
 ```
 
+### Suporte opcional à compilação com Triton
+
+A etapa 4 (`scripts/quickstart/tutorial_step_4.py`) utiliza `compile_repeated_blocks(fullgraph=True)` para compilar os blocos repetidos do transformer com `torch.compile`. Para acompanhar essa etapa, instale o Triton com o ambiente virtual ativado, usando o comando correspondente ao seu sistema operacional.
+
+**Windows (PowerShell):**
+
+```powershell
+uv pip install "triton-windows==3.7.1.post27"
+```
+
+**Linux:**
+
+```bash
+uv pip install "triton>=3.7,<3.8"
+```
+
 ## 4. Verificar a instalação
 
 ```powershell
