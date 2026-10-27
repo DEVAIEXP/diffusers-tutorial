@@ -62,6 +62,14 @@ uv pip install "triton-windows==3.7.1.post27"
 uv pip install "triton>=3.7,<3.8"
 ```
 
+### Instalação opcional do SDNQ para a etapa 5
+
+Para acompanhar a etapa 5 da série, instale também a biblioteca `sdnq` com o ambiente virtual ativado:
+
+```powershell
+uv pip install sdnq
+```
+
 ## 4. Verificar a instalação
 
 ```powershell
